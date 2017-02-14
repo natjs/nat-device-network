@@ -15,9 +15,9 @@ Pod::Spec.new do |s|
   #  summary should be tweet-length, and the description more in depth.
   #
 
-  s.name         = "NatGeolocation"
+  s.name         = "NatDeviceNetwork"
   s.version      = "0.0.1"
-  s.summary      = "Nat.js Module: NatDeviceNetwork."
+  s.summary      = "Nat.js Module: DeviceNetwork."
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
@@ -25,7 +25,7 @@ Pod::Spec.new do |s|
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   s.description  = <<-DESC
-                    Nat.js Module: NatDeviceNetwork (status)
+                    Nat.js Module: DeviceNetwork (status)
                    DESC
 
   s.homepage     = "http://natjs.com"

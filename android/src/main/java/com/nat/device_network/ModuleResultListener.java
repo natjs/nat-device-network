@@ -5,6 +5,6 @@ package com.nat.device_network;
  * Copyright (c) 2017 Nat. All rights reserved.
  */
 
-public interface HLModuleResultListener {
+public interface ModuleResultListener {
     void onResult(Object o);
 }

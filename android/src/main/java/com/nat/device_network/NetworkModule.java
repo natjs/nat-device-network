@@ -16,7 +16,7 @@ import java.util.Locale;
  * Copyright (c) 2017 Nat. All rights reserved.
  */
 
-public class HLWXNetworkModule{
+public class NetworkModule {
 
     public static final String WIFI = "wifi";
     public static final String WIMAX = "wimax";
@@ -54,20 +54,20 @@ public class HLWXNetworkModule{
     public static final String TYPE_4G = "4g";
     public static final String TYPE_NONE = "none";
 
-    private static final String LOG_TAG = "HLWXNetworkModule";
+    private static final String LOG_TAG = "NetworkModule";
 
     private Context mContext;
-    private static volatile HLWXNetworkModule instance = null;
+    private static volatile NetworkModule instance = null;
 
-    private HLWXNetworkModule(Context context){
+    private NetworkModule(Context context){
         mContext = context;
     }
 
-    public static HLWXNetworkModule getInstance(Context context) {
+    public static NetworkModule getInstance(Context context) {
         if (instance == null) {
-            synchronized (HLWXNetworkModule.class) {
+            synchronized (NetworkModule.class) {
                 if (instance == null) {
-                    instance = new HLWXNetworkModule(context);
+                    instance = new NetworkModule(context);
                 }
             }
         }
@@ -75,7 +75,7 @@ public class HLWXNetworkModule{
         return instance;
     }
 
-    public void status(HLModuleResultListener listener){
+    public void status(ModuleResultListener listener){
         ConnectivityManager sockMan = (ConnectivityManager) mContext.getSystemService(Context.CONNECTIVITY_SERVICE);
         NetworkInfo info = sockMan.getActiveNetworkInfo();
         String connectionType = "";
